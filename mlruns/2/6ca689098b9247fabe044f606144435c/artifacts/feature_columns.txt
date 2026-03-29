@@ -1,0 +1,17 @@
+CreditScore
+Gender
+Age
+Tenure
+Balance
+NumOfProducts
+HasCrCard
+IsActiveMember
+EstimatedSalary
+Complain
+Satisfaction Score
+Point Earned
+Geography_Germany
+Geography_Spain
+Card Type_GOLD
+Card Type_PLATINUM
+Card Type_SILVER
