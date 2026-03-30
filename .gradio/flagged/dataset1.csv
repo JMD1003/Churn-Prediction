@@ -1,0 +1,2 @@
+Gender,Age,Geography,Credit Score,Tenure (years),Balance ($),Number of Products,Estimated Salary ($),"Has Credit Card (0=No, 1=Yes)","Is Active Member (0=No, 1=Yes)","Complain (0=No, 1=Yes)",Satisfaction Score,Points Earned,Card Type,Churn Prediction,timestamp
+Male,35,France,650,5,75000,1,50000,1,1,0,3,500,SILVER,,2026-03-30 15:17:09.347158

@@ -36,9 +36,9 @@ def main():
     assert "Gender" not in df_features.select_dtypes(include="object").columns, "Gender still object dtype!"
     assert "Surname" not in df_features.columns, "Surname not dropped!"
     assert "RowNumber" not in df_features.columns, "RowNumber not dropped!"
-    print("✅ All sanity checks passed!")
+    print("All sanity checks passed!")
 
-    print("\n✅ Phase 1 pipeline completed successfully!")
+    print("\nPhase 1 pipeline completed successfully!")
 
 if __name__ == "__main__":
     main()
