@@ -1,4 +1,7 @@
 Bank Customer Churn Prediction
+
 This project builds an end-to-end machine learning pipeline to predict bank customer churn using a dataset of 10,000 customer records. The model uses XGBoost with Optuna hyperparameter tuning and a custom classification threshold to maximize recall on the minority churn class, achieving a 99.6% F1-score and 0.9985 ROC-AUC. Data quality is enforced before training using Great Expectations, and all experiments — parameters, metrics, and model artifacts — are tracked with MLflow for full reproducibility.
+
 The project is structured as a modular MLOps pipeline with separate components for data loading, preprocessing, feature engineering, validation, and training, all executable from a single CLI command. Feature engineering applies deterministic binary encoding for Gender and one-hot encoding for Geography and Card Type, with the feature schema saved at training time and reused at serving time to prevent train/serve skew. A custom inference pipeline ensures predictions are consistent whether called through the API or the web interface.
+
 The trained model is served via a FastAPI REST API with an interactive Gradio web UI for manual testing, containerized with Docker for portability. A GitHub Actions CI/CD workflow automatically builds and pushes the Docker image to Docker Hub on every push to main, enabling continuous delivery with no manual steps.
