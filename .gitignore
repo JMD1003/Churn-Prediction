@@ -9,9 +9,10 @@ __pycache__/
 *.pyo
 
 mlruns/
-artifacts/
 data/raw/
 data/processed/
 
-!src/serving/model/
-!src/serving/model/**
+!src/serving/models/
+!src/serving/models/**
+!artifacts/feature_columns.json
+!artifacts/preprocessing.pkl

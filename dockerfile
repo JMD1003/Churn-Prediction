@@ -10,15 +10,9 @@ RUN pip install --upgrade pip \
 
 COPY . .
 
-COPY src/serving/models/m-6388e90892ae420a8f7c5c976b4003a7/artifacts/model.ubj /app/model/model.ubj
-
-COPY artifacts/feature_columns.json /app/model/feature_columns.json
-
-COPY artifacts/preprocessing.pkl /app/model/preprocessing.pkl
-
 ENV PYTHONUNBUFFERED=1 \
     PYTHONPATH=/app/src \
-    MODEL_DIR=/app/model
+    MODEL_DIR=/app/src/serving/models/m-6388e90892ae420a8f7c5c976b4003a7/artifacts
 
 EXPOSE 8000
 

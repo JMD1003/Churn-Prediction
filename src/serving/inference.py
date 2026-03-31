@@ -15,7 +15,7 @@ MODEL_DIR = os.environ.get("MODEL_DIR", max(model_paths, key=os.path.getmtime))
 print(f"Using model from: {MODEL_DIR}")
 
 try:
-    model_file = os.path.join(MODEL_DIR, "artifacts", "model.ubj")
+    model_file = os.path.join(MODEL_DIR, "model.ubj")
     model = xgb.XGBClassifier()
     model.load_model(model_file)
     print(f"Model loaded successfully from {model_file}")
@@ -23,13 +23,10 @@ except Exception as e:
     raise Exception(f"Failed to load model: {e}")
 
 try:
-    feature_file = os.path.join(BASE_DIR, "..", "artifacts", "feature_columns.json")
-    if not os.path.exists(feature_file):
-        feature_file = os.path.abspath(os.path.join(BASE_DIR, "..", "artifacts", "feature_columns.json"))
-
+    feature_file = os.path.join(MODEL_DIR, "feature_columns.json")
     with open(feature_file) as f:
         FEATURE_COLS = json.load(f)
-    print(f"✅ Loaded {len(FEATURE_COLS)} feature columns")
+    print(f"Loaded {len(FEATURE_COLS)} feature columns")
 except Exception as e:
     raise Exception(f"Failed to load feature columns: {e}")
 
