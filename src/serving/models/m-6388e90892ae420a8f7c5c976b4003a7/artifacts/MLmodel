@@ -1,0 +1,22 @@
+artifact_path: file:C:/Users/jaked/Downloads/Churn Prediction/mlruns/2/models/m-6388e90892ae420a8f7c5c976b4003a7/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.13.2
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: ubj
+    xgb_version: 3.2.0
+mlflow_version: 3.10.1
+model_id: m-6388e90892ae420a8f7c5c976b4003a7
+model_size_bytes: 399526
+model_uuid: m-6388e90892ae420a8f7c5c976b4003a7
+prompts: null
+run_id: 68cf6a4f22dd48c485676a80405eae5f
+utc_time_created: '2026-03-30 18:34:33.680951'
