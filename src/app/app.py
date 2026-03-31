@@ -86,5 +86,4 @@ demo = gr.Interface(
     description="Fill in the customer details to get a churn prediction.",
 )
 
-
 app = gr.mount_gradio_app(app, demo, path="/ui")
